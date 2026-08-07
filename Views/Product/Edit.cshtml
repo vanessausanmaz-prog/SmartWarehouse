@@ -1,0 +1,31 @@
+@model SmartWarehouse.Entities.Product
+
+<h2>Ürün Düzenle</h2>
+
+<form asp-action="Edit" method="post">
+
+    <input type= "hidden" asp-for="Id"/>
+
+    <label>Ürün Adı</label>
+
+    <input asp-for="ProductName" class="form-control" />
+
+    <label>Fiyat</label>
+
+    <input asp-for="Price" class="form-control" />
+
+    <label>Stok</label>
+
+    <input asp-for="Stock" class="form-control" />
+
+    <label>Barkod</label>
+
+    <input asp-for="Barcode" class="form-control" />
+
+    <label>Açıklama</label>
+
+    <input asp-for="Description" class="form-control" />
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+
+</form>

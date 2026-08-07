@@ -1,0 +1,31 @@
+@model SmartWarehouse.Entities.Product
+
+<h2>Ürün Sil</h2>
+
+<form asp-action="Delete" method="post">
+
+    <input type= "hidden" asp-for="Id"/>
+
+    <label>Ürün Adı</label>
+
+    <input asp-for="ProductName" class="form-control" readonly />
+
+    <label>Fiyat</label>
+
+    <input asp-for="Price" class="form-control" readonly/>
+
+    <label>Stok</label>
+
+    <input asp-for="Stock" class="form-control" readonly/>
+
+    <label>Barkod</label>
+
+    <input asp-for="Barcode" class="form-control" readonly/>
+
+    <label>Açıklama</label>
+
+    <input asp-for="Description" class="form-control" readonly/>
+
+    <button type="submit" class="btn btn-danger">Sil</button>
+
+</form>
