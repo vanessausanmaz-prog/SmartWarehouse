@@ -32,19 +32,14 @@ namespace SmartWarehouse.Controllers
             return View(product);
         }
 
-        public async Task<IActionResult> Delete (int id)
-        {
-            var product=await _context.Products.FindAsync(id);
-
-            return View(product);
-        }
-
         [HttpPost]
         public async Task<IActionResult>Create(Product product)
         {
             _context.Products.Add(product);
 
             await _context.SaveChangesAsync();
+
+            TempData["Success"] = "Ürün başarıyla eklendi.";
 
             return RedirectToAction("Index");
         }   
@@ -56,15 +51,25 @@ namespace SmartWarehouse.Controllers
 
             await _context.SaveChangesAsync();
 
+            TempData["Success"] = "Ürün başarıyla güncellendi.";
+
             return RedirectToAction("Index");
         }
 
         [HttpPost]
-        public async Task<IActionResult>Delete (Product product)
+        public async Task<IActionResult>Delete (int id)
         {
-            _context.Products.Remove(product);
 
-            await _context.SaveChangesAsync();
+            var product = await _context.Products.FindAsync(id);
+
+            if (product != null)
+            {
+                _context.Products.Remove(product);
+   
+                await _context.SaveChangesAsync();
+
+                TempData["Success"] = "Ürün başarıyla silindi.";
+            }
 
             return RedirectToAction("Index");
         }
@@ -72,16 +77,30 @@ namespace SmartWarehouse.Controllers
         [HttpPost]
         public async Task<IActionResult>DeleteSelected([FromBody] List<int> selectedIds)
         {
-            
-            var products = await _context.Products
-                .Where(p => selectedIds.Contains(p.Id))
-                .ToListAsync();
+            try
+            {
+                var products = await _context.Products
+                    .Where(p => selectedIds.Contains(p.Id))
+                    .ToListAsync();
 
-            _context.Products.RemoveRange(products);
+                _context.Products.RemoveRange(products);
 
-            await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
 
-            return RedirectToAction("Index");
+                return Json(new
+                {
+                    success = true,
+                    message = "Seçilen ürünler başarıyla silindi."
+                });
+            }
+            catch (Exception ex)
+            {
+                return Json(new
+                {
+                    success = false,
+                    message = ex.Message
+                });
+            }
         }
     }
 }

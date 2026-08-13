@@ -41,8 +41,39 @@
             &copy; 2026 - SmartWarehouse - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="successToast" class="toast text-bg-success border-0">
+            <div class="d-flex">
+                <div class="toast-body" id="successToastMessage">
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                        data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    @if (TempData["Success"] != null)
+    {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const toastMessage = document.getElementById("successToastMessage");
+            const toastElement = document.getElementById("successToast");
+
+            toastMessage.textContent = @Html.Raw(
+                System.Text.Json.JsonSerializer.Serialize(TempData["Success"])
+            );
+
+            const toast = new bootstrap.Toast(toastElement);
+            toast.show();
+        });
+    </script>
+    }
+
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

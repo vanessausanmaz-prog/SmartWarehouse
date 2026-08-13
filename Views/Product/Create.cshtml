@@ -1,29 +1,51 @@
 @model SmartWarehouse.Entities.Product
 
-<h2>Yeni Ürün Ekle</h2>
-
 <form asp-action="Create" method="post">
 
-    <label>Ürün Adı</label>
+<div class="container mt-4">
 
-    <input asp-for="ProductName" class="form-control" />
+    <div class="card shadow-sm">
+        
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">Yeni Ürün Ekle</h3>
+        </div>
 
-    <label>Fiyat</label>
+        <div class="card-body">
 
-    <input asp-for="Price" class="form-control" />
+            <div class="mb-3">
+                <label class="form-label fw-bold">Ürün Adı</label>
+                <input asp-for="ProductName" class="form-control" placeholder="Ürün adını giriniz" />
+            </div>
 
-    <label>Stok</label>
+            <div class="mb-3">
+                <label class="form-label fw-bold">Fiyat</label>
+                <input asp-for="Price" class="form-control" placeholder="Ürün fiyatını giriniz" />
+            </div>
 
-    <input asp-for="Stock" class="form-control" />
+            <div class="mb-3">
+                <label class="form-label fw-bold">Stok</label>
+                <input asp-for="Stock" class="form-control" placeholder="Stok miktarını giriniz" />
+            </div>
 
-    <label>Barkod</label>
+            <div class="mb-3">
+                <label class="form-label fw-bold">Barkod</label>
+                <input asp-for="Barcode" class="form-control" placeholder="Barkod numarasını giriniz" />
+            </div>
 
-    <input asp-for="Barcode" class="form-control" />
+            <div class="mb-3">
+                <label class="form-label fw-bold">Açıklama</label>
+                <input asp-for="Description" class="form-control" placeholder="Ürün açıklamasını giriniz" />
+            </div>
 
-    <label>Açıklama</label>
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-success rounded-pill px-4">
+                    Kaydet
+                </button>
+            </div>
 
-    <input asp-for="Description" class="form-control" />
+        </div>
 
-    <button type="submit" class="btn btn-primary">Kaydet</button>
+    </div>
 
+</div>
 </form>
