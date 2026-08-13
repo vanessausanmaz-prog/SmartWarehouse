@@ -1,22 +1,21 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using SmartWarehouse.DataAccess;
+using SmartWarehouse.Business.Interfaces;
 using SmartWarehouse.Entities;
 
 namespace SmartWarehouse.Controllers
 {
     public class ProductController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IProductService _productService;
 
-        public ProductController(ApplicationDbContext context)
+        public ProductController(IProductService productService)
         {
-            _context = context;
+            _productService = productService;
         }
 
         public async Task<IActionResult> Index()
         {
-            var products = await _context.Products.ToListAsync();
+            var products = await _productService.GetAllAsync();
             return View(products);
         }
 
@@ -27,7 +26,7 @@ namespace SmartWarehouse.Controllers
 
         public async Task<IActionResult> Edit (int id)
         {
-            var product=await _context.Products.FindAsync(id);
+            var product=await _productService.GetByIdAsync(id);
             
             return View(product);
         }
@@ -35,9 +34,8 @@ namespace SmartWarehouse.Controllers
         [HttpPost]
         public async Task<IActionResult>Create(Product product)
         {
-            _context.Products.Add(product);
 
-            await _context.SaveChangesAsync();
+            await _productService.AddAsync(product);
 
             TempData["Success"] = "Ürün başarıyla eklendi.";
 
@@ -47,9 +45,8 @@ namespace SmartWarehouse.Controllers
         [HttpPost]
         public async Task<IActionResult>Edit (Product product)
         {
-            _context.Products.Update(product);
 
-            await _context.SaveChangesAsync();
+            await _productService.UpdateAsync(product);
 
             TempData["Success"] = "Ürün başarıyla güncellendi.";
 
@@ -59,19 +56,11 @@ namespace SmartWarehouse.Controllers
         [HttpPost]
         public async Task<IActionResult>Delete (int id)
         {
-
-            var product = await _context.Products.FindAsync(id);
-
-            if (product != null)
-            {
-                _context.Products.Remove(product);
-   
-                await _context.SaveChangesAsync();
+                await _productService.DeleteAsync(id);
 
                 TempData["Success"] = "Ürün başarıyla silindi.";
-            }
-
-            return RedirectToAction("Index");
+            
+                return RedirectToAction("Index");
         }
         
         [HttpPost]
@@ -79,13 +68,7 @@ namespace SmartWarehouse.Controllers
         {
             try
             {
-                var products = await _context.Products
-                    .Where(p => selectedIds.Contains(p.Id))
-                    .ToListAsync();
-
-                _context.Products.RemoveRange(products);
-
-                await _context.SaveChangesAsync();
+                await _productService.DeleteSelectedAsync(selectedIds);
 
                 return Json(new
                 {

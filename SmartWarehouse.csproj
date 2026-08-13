@@ -17,13 +17,17 @@
   <ItemGroup>
     <ProjectReference Include="SmartWarehouse.Entities\SmartWarehouse.Entities.csproj" />
     <ProjectReference Include="SmartWarehouse.DataAccess\SmartWarehouse.DataAccess.csproj" />
+    <ProjectReference Include="SmartWarehouse.Business\SmartWarehouse.Business.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
+<ItemGroup>
   <Compile Remove="SmartWarehouse.Entities/**/*.cs" />
   <Compile Remove="SmartWarehouse.DataAccess/**/*.cs" />
+  <Compile Remove="SmartWarehouse.Business/**/*.cs" />
+
   <None Include="SmartWarehouse.Entities/**/*.cs" />
   <None Include="SmartWarehouse.DataAccess/**/*.cs" />
+  <None Include="SmartWarehouse.Business/**/*.cs" />
 </ItemGroup>
 
 </Project>
