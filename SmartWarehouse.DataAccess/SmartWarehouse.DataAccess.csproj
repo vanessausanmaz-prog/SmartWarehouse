@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\SmartWarehouse.Entities\SmartWarehouse.Entities.csproj" />
     <ProjectReference Include="..\Domain\SmartWarehouse.Domain.csproj" />
   </ItemGroup>
 

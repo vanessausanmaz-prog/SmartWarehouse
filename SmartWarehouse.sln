@@ -5,11 +5,11 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartWarehouse", "SmartWarehouse.csproj", "{1AC82859-2B95-4830-8234-859D2C218EEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartWarehouse.Entities", "SmartWarehouse.Entities\SmartWarehouse.Entities.csproj", "{0D67EE80-CD1B-4ED4-A2CD-8F7188DA1745}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartWarehouse.DataAccess", "SmartWarehouse.DataAccess\SmartWarehouse.DataAccess.csproj", "{E8272FEC-3512-4083-89C1-8C2FF7EF4F6C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartWarehouse.Business", "SmartWarehouse.Business\SmartWarehouse.Business.csproj", "{77F8BBA0-FE69-4379-9FF1-F846BE67E8E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartWarehouse.Domain", "Domain\SmartWarehouse.Domain.csproj", "{8838E2D0-CA72-4FED-A1E2-D0D60FACEE89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,10 +24,6 @@ Global
 		{1AC82859-2B95-4830-8234-859D2C218EEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AC82859-2B95-4830-8234-859D2C218EEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AC82859-2B95-4830-8234-859D2C218EEC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D67EE80-CD1B-4ED4-A2CD-8F7188DA1745}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D67EE80-CD1B-4ED4-A2CD-8F7188DA1745}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D67EE80-CD1B-4ED4-A2CD-8F7188DA1745}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D67EE80-CD1B-4ED4-A2CD-8F7188DA1745}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E8272FEC-3512-4083-89C1-8C2FF7EF4F6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E8272FEC-3512-4083-89C1-8C2FF7EF4F6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8272FEC-3512-4083-89C1-8C2FF7EF4F6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -36,5 +32,9 @@ Global
 		{77F8BBA0-FE69-4379-9FF1-F846BE67E8E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77F8BBA0-FE69-4379-9FF1-F846BE67E8E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77F8BBA0-FE69-4379-9FF1-F846BE67E8E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8838E2D0-CA72-4FED-A1E2-D0D60FACEE89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8838E2D0-CA72-4FED-A1E2-D0D60FACEE89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8838E2D0-CA72-4FED-A1E2-D0D60FACEE89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8838E2D0-CA72-4FED-A1E2-D0D60FACEE89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
