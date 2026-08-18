@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using SmartWarehouse.Business.Interfaces;
+using SmartWarehouse.Application.Interfaces;
 using SmartWarehouse.Infrastructure;
 using SmartWarehouse.Domain.Entities;
 

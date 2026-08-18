@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using SmartWarehouse.Business.Interfaces;
+using SmartWarehouse.Application.Interfaces;
 
 namespace SmartWarehouse.Controllers
 {

@@ -17,12 +17,12 @@
   <ItemGroup>
     <ProjectReference Include="Domain\SmartWarehouse.Domain.csproj" />
     <ProjectReference Include="SmartWarehouse.Infrastructure\SmartWarehouse.Infrastructure.csproj" />
-    <ProjectReference Include="SmartWarehouse.Business\SmartWarehouse.Business.csproj" />
+    <ProjectReference Include="SmartWarehouse.Application\SmartWarehouse.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="Domain/**/*.cs" />
-    <Compile Remove="SmartWarehouse.Business/**/*.cs" />
+    <Compile Remove="SmartWarehouse.Application/**/*.cs" />
     <Compile Remove="SmartWarehouse.Infrastructure/**/*.cs" />
     <Compile Remove="SmartWarehouse.DataAccess/**/*.cs" />
   </ItemGroup>

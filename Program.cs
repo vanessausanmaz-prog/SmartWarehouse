@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using SmartWarehouse.Business.Interfaces;
-using SmartWarehouse.Business.Services;
+using SmartWarehouse.Application.Interfaces;
+using SmartWarehouse.Application.Services;
 using SmartWarehouse.Infrastructure;
 using SmartWarehouse.Infrastructure.Repositories;
 

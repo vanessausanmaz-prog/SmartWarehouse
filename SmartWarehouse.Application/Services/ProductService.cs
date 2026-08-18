@@ -1,7 +1,7 @@
-using SmartWarehouse.Business.Interfaces;
+using SmartWarehouse.Application.Interfaces;
 using SmartWarehouse.Domain.Entities;
 
-namespace SmartWarehouse.Business.Services
+namespace SmartWarehouse.Application.Services
 {
     public class ProductService : IProductService
     {

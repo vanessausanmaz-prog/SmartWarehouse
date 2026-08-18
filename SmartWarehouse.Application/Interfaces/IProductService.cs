@@ -1,6 +1,6 @@
 using SmartWarehouse.Domain.Entities;
 
-namespace SmartWarehouse.Business.Interfaces
+namespace SmartWarehouse.Application.Interfaces
 {
     public interface IProductService
     {

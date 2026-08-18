@@ -1,8 +1,8 @@
 using SmartWarehouse.Domain.Entities;
 
-namespace SmartWarehouse.Business.Interfaces
+namespace SmartWarehouse.Application.Interfaces
 {
-    public interface IStockMovementRepository
+    public interface IStockMovementService
     {
         Task<List<StockMovement>> GetAllAsync();
         Task<StockMovement?> GetByIdAsync(int id);
