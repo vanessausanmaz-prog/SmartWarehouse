@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using SmartWarehouse.Business.Interfaces;
-using SmartWarehouse.Entities;
+using SmartWarehouse.Domain.Entities;
 
 namespace SmartWarehouse.Controllers
 {

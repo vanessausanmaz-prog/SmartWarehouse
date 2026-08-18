@@ -1,5 +1,5 @@
 using System;
-namespace SmartWarehouse.Entities;
+namespace SmartWarehouse.Domain.Entities;
 public class Product
 {
     public int Id { get; set; }

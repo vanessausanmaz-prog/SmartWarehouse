@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using SmartWarehouse.DataAccess.Interfaces;
-using SmartWarehouse.Entities;
+using SmartWarehouse.Domain.Entities;
 
 namespace SmartWarehouse.DataAccess.Repositories
 {

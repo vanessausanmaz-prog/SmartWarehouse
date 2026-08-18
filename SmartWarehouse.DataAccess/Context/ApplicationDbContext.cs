@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using SmartWarehouse.Entities;
+using SmartWarehouse.Domain.Entities;
 
 namespace SmartWarehouse.DataAccess
 {
@@ -12,5 +12,6 @@ namespace SmartWarehouse.DataAccess
 
         public DbSet<Product> Products { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<StockMovement> StockMovements { get; set; }
     }
 }

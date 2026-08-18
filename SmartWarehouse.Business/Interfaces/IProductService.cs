@@ -1,4 +1,4 @@
-using SmartWarehouse.Entities;
+using SmartWarehouse.Domain.Entities;
 
 namespace SmartWarehouse.Business.Interfaces
 {
