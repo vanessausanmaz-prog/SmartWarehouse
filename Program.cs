@@ -2,7 +2,6 @@ using Microsoft.EntityFrameworkCore;
 using SmartWarehouse.Business.Interfaces;
 using SmartWarehouse.Business.Services;
 using SmartWarehouse.DataAccess;
-using SmartWarehouse.DataAccess.Interfaces;
 using SmartWarehouse.DataAccess.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);

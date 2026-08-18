@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\SmartWarehouse.Domain.csproj" />
+    <ProjectReference Include="..\SmartWarehouse.Business\SmartWarehouse.Business.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,5 +1,4 @@
 using SmartWarehouse.Business.Interfaces;
-using SmartWarehouse.DataAccess.Interfaces;
 using SmartWarehouse.Domain.Entities;
 
 namespace SmartWarehouse.Business.Services

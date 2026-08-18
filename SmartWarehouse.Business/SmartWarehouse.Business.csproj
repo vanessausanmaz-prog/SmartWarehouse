@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\SmartWarehouse.DataAccess\SmartWarehouse.DataAccess.csproj" />
     <ProjectReference Include="..\Domain\SmartWarehouse.Domain.csproj" />
   </ItemGroup>
 

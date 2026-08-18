@@ -1,6 +1,6 @@
 using SmartWarehouse.Domain.Entities;
 
-namespace SmartWarehouse.DataAccess.Interfaces
+namespace SmartWarehouse.Business.Interfaces
 {
     public interface IStockMovementRepository
     {
