@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using SmartWarehouse.Business.Interfaces;
-using SmartWarehouse.DataAccess;
+using SmartWarehouse.Infrastructure;
 using SmartWarehouse.Domain.Entities;
 
-namespace SmartWarehouse.DataAccess.Repositories
+namespace SmartWarehouse.Infrastructure.Repositories
 {
     public class ProductRepository : IProductRepository
     {

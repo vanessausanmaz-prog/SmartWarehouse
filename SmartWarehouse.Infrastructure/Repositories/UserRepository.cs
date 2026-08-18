@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
-using SmartWarehouse.DataAccess;
+using SmartWarehouse.Infrastructure;
 using SmartWarehouse.Business.Interfaces;
 using SmartWarehouse.Domain.Entities;
 
 
-namespace SmartWarehouse.DataAccess.Repositories
+namespace SmartWarehouse.Infrastructure.Repositories
 {
     public class UserRepository : IUserRepository
     {

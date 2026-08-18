@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SmartWarehouse.DataAccess;
+using SmartWarehouse.Infrastructure;
 
 #nullable disable
 
-namespace SmartWarehouse.DataAccess.Migrations
+namespace SmartWarehouse.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20260813170925_AddStockMovement")]

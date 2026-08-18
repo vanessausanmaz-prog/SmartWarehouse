@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using SmartWarehouse.Domain.Entities;
 
-namespace SmartWarehouse.DataAccess
+namespace SmartWarehouse.Infrastructure
 {
     public class ApplicationDbContext : DbContext
     {

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace SmartWarehouse.DataAccess.Migrations
+namespace SmartWarehouse.Infrastructure.Migrations
 {
     /// <inheritdoc />
     public partial class AddStockMovement : Migration
